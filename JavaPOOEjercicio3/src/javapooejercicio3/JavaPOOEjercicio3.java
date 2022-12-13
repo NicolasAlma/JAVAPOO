@@ -17,6 +17,9 @@ informa al usuario. Si no, se hace la división y se devuelve el resultado al ma
  */
 package javapooejercicio3;
 
+import Entidades.Operacion;
+import Servicios.operacionServicio;
+
 /**
  *
  * @author tu
@@ -27,13 +30,20 @@ public class JavaPOOEjercicio3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        
-        
-    
-        
-        
-        
+        //Creo un objeto Atraves de la clase Servicio
+        operacionServicio OP = new operacionServicio();
+        //Creo un Objeto Atraves de la clase Operacion Y le asigno los valores del metodo crearOperacion
+        //Sino se llega a asignar los atributos del Objeto OM, estos quedan Vacios.
+        Operacion OM = OP.crearOperacion();;
+        ///Llamo los metodos correspondientes (Mediante el Objeto OM que posee los valores) :
+        //Metodo Suma de la Clase Servicio
+        OP.sumar(OM);
+        //Metodo Resta de la Clase Servicio
+        OP.restar(OM);
+        //Metodo Multiplicar de la Clase Servicio
+         OP.multiplicar(OM);
+        //Metodo Dividir de la Clase Servicio
+        OP.dividir(OM);
     }
 
 }
